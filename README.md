@@ -1,5 +1,5 @@
 # silversat
-python script to receive and decode SSDV image from SilverSat cube sat (IL2P protocol). Work flawless with audio stream or recorded, like from satnogs observation, SDR , local WAV file, etc
+python script to decode SSDV image from SilverSat cube sat (IL2P protocol). Work flawless with audio stream or recorded, like from satnogs observation, SDR , local WAV file, etc
 
 ## requirements
 latest direwolf - https://github.com/wb2osz/direwolf/
