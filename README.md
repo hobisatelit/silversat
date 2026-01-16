@@ -31,15 +31,15 @@ chmod 755 silver.py
 
 Open three terminal
 
-on *first terminal* run Direwolf KISS server
+on **first terminal** run Direwolf KISS server
 
 ``direwolf -c direwolf.conf``
 
-on *second terminal* run
+on **second terminal** run
 
 ``./silver.py``
 
-on *third terminal* run
+on **third terminal** run
 ```
 sudo apt install pavucontrol
 pavucontrol
