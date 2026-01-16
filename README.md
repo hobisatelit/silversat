@@ -1,6 +1,19 @@
 # silversat
 python script to decode SSDV image from SilverSat cube sat (IL2P protocol). Work flawless with audio stream or recorded, like from satnogs observation, SDR , local WAV file, etc. Auto detect image id, sender and frame id. automatic convert .bin into jpeg image.
 
+```
+./silver.py -h
+usage: silver.py [-h] [--host HOST] [--port PORT] [-v]
+
+Dire Wolf KISS TCP → SSDV (195 bytes after IL2P) → sorted .bin files
+
+options:
+  -h, --help     show this help message and exit
+  --host HOST    Dire Wolf host
+  --port PORT    Dire Wolf KISS TCP port
+  -v, --verbose  Print hex of each received SSDV candidate + parsing details
+```
+
 ## requirements
 latest direwolf - https://github.com/wb2osz/direwolf/
 
@@ -18,15 +31,15 @@ chmod 755 silver.py
 
 Open three terminal
 
-on first terminal run Direwolf KISS server
+on *first terminal* run Direwolf KISS server
 
 ``direwolf -c direwolf.conf``
 
-on second terminal run
+on *second terminal* run
 
 ``./silver.py``
 
-on third terminal run
+on *third terminal* run
 ```
 sudo apt install pavucontrol
 pavucontrol
