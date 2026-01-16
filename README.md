@@ -47,7 +47,8 @@ pavucontrol
 
 look at Recording tab, you will see direwolf app there, please change capture to MONITOR mode.
 
-play the audio, for example from satnogs observation
+and the last step is
+**play the audio, for example from satnogs observation**
 
 example: 
 https://network.satnogs.org/observations/13203004/
