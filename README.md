@@ -1,5 +1,5 @@
 # silversat
-python script to decode SSDV image from SilverSat cube sat (IL2P protocol). Work flawless with audio stream or recorded, like from satnogs observation, SDR , local WAV file, etc. Auto detect image id, sender and frame id. automatic convert .bin into jpeg image.
+python script to decode SSDV image from SilverSat cube sat (IL2P protocol). Work flawless with audio recording or audio stream, like from satnogs observation, SDR , local WAV file, etc. Auto detect image id, sender and frame id. automatic convert .bin into jpeg image.
 
 ```
 ./silver.py -h
