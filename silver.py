@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyleft 2026 hobisatelit
-# https://github.com/hobisatelit/
+# https://github.com/hobisatelit/silversat
 # License: GPL-3.0-or-later
 # SSDV doc: https://ukhas.org.uk/doku.php?id=guides:ssdv
 
@@ -79,10 +79,18 @@ def parse_ssdv_packet(ssdv_bytes: bytes, verbose: bool = False) -> dict | None:
         if verbose:
             print(f"  → Invalid sync bytes: {ssdv_bytes[0]:02X} {ssdv_bytes[1]:02X} (expected 55 67)")
         return None
-
     
-    callsign = bytes_to_hex_preview(ssdv_bytes[2:6], 1000)
-    callsign = callsign.replace(" ", "")
+    #callsign = bytes_to_hex_preview(ssdv_bytes[2:6], 1000)
+    #callsign = callsign.replace(" ", "")
+    
+    callsign = int.from_bytes(ssdv_bytes[2:6])
+    
+	  # Decode the callsign
+    code = callsign
+    callsign = ''
+    while code:
+      callsign += '-0123456789---ABCDEFGHIJKLMNOPQRSTUVWXYZ'[code % 40]
+      code //= 40
 
     if not callsign:
         callsign = "unknown"
